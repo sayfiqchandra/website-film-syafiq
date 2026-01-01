@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Scenenema</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+
+    <script src="https://unpkg.com/feather-icons"></script>
+
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        text-decoration: none;
+      }
+
+      body,
+      h1,
+      h2,
+      h3,
+      p,
+      a {
+        font-family: "Poppins", sans-serif !important;
+      }
+
+      body {
+        background-color: rgba(134, 6, 6, 0.882);
+        color: aliceblue;
+      }
+
+      /* Jarak agar section tidak tertutup navbar saat diklik */
+      section {
+        scroll-margin-top: 100px;
+      }
+
+      /* Banner */
+      .banner {
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+      }
+
+      .banner-img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+      }
+
+      .banner-text {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        width: 100%;
+      }
+
+      .banner-text h1 {
+        font-size: 3rem;
+        font-weight: 700;
+        letter-spacing: 5px;
+        text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8);
+      }
+
+      /* Navbar */
+      .navbar-custom {
+        background-color: rgba(51, 33, 31, 0.95);
+        padding: 1rem 7%;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+      }
+
+      .navbar-brand {
+        font-size: 2rem;
+        font-weight: 700;
+        color: aqua !important;
+        font-style: italic;
+      }
+
+      .navbar-brand span {
+        color: rgba(224, 233, 233, 0.704);
+      }
+
+      .nav-link {
+        color: white !important;
+        margin: 0 1rem;
+        transition: 0.3s;
+      }
+
+      .nav-link:hover {
+        color: #ff4d4d !important;
+      }
+
+      /* Hero & Carousel */
+      .hero {
+        min-height: 80vh;
+        display: flex;
+        align-items: center;
+        padding: 60px 0;
+      }
+
+      .carousel-img {
+        height: 400px;
+        object-fit: cover;
+        border-radius: 20px;
+      }
+
+      /* Footer */
+      .footer {
+        background-color: #1a1a1a;
+        color: white;
+        text-align: center;
+        padding: 20px;
+        width: 100%;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header class="banner" id="home">
+      <img src="img/headhero.jpg" alt="Banner Scenema" class="banner-img" />
+      <div class="banner-text">
+        <h1>SCENENEMA</h1>
+      </div>
+    </header>
+
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-custom sticky-top">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">scene<span>nema</span>.</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="#home">HOME</a></li>
+            <li class="nav-item">
+              <a class="nav-link" href="#about">ABOUT</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#gallery">GALLERY</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">CONTACT</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <section class="hero container">
+      <div class="row align-items-center">
+        <div class="col-lg-5 mb-5 mb-lg-0">
+          <h1 class="display-4 fw-bold mb-3">
+            Menonton dengan damai dan tenang hanya di
+            <span class="text-danger">scenema</span>
+          </h1>
+          <p class="lead mb-4">
+            Kamu mau nonton dengan gratis dan juga kualitas video yang full HD
+            langsung aja ke sini.
+          </p>
+          <a href="#about" class="btn btn-outline-light btn-lg px-4"
+            >Selengkapnya</a
+          >
+        </div>
+
+        <div class="col-lg-7">
+          <div
+            id="heroCarousel"
+            class="carousel slide shadow-lg"
+            data-bs-ride="carousel"
+          >
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img
+                  src="img/movie1.jpg"
+                  class="d-block w-100 carousel-img"
+                  alt="Movie 1"
+                />
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="img/movie2.jpg"
+                  class="d-block w-100 carousel-img"
+                  alt="Movie 2"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="container py-5">
+      <div class="row justify-content-center text-center">
+        <div class="col-md-8">
+          <h2 class="display-5 fw-bold mb-4">Tentang Scenema</h2>
+          <p>
+            Scenema adalah solusi bagi Anda yang mencari pengalaman menonton
+            film berkualitas tanpa biaya tambahan. Kami menyediakan berbagai
+            koleksi film mulai dari genre Action, Drama, hingga Horor dengan
+            kualitas Full HD.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <p class="mb-0">
+        &copy; 2026 Syafiq Chandra Muzaki, NIM: 251011700111, 01SIFP002
+      </p>
+      <div id="time"></div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+    <script>
+      feather.replace();
+    </script>
+  </body>
+</html>
